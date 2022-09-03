@@ -8,8 +8,10 @@ by elliott watson
 - the current version of ambisleep leverages mpc/mpd under the hood, much like wolfgang.
 however the current implementation is geared around looping mp3 files rather than streaming.
 
-- tracks are currently added via `mpc add file:///filepath`
-which worked after enabling unix socket comm in the config file mpd.conf
+- tracks are currently added via `mpc add file:///filepath` which worked after enabling unix socket comm in the config file mpd.conf (uncomment bind_to_address path)
+- set mpd to loop with `mpc repeat on`
+- more info here: https://linux.die.net/man/1/mpc
+
 
 - the code is currently written in python3
 
