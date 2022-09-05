@@ -1,15 +1,13 @@
 # ambisleep
 
-by elliott watson
-
-## raspberry pi based sleep machine, forked from wolfgang by brad arnett
-## https://github.com/daed/wolfgang
+## about
+- Raspberry Pi based sleep machine, forked from wolfgang by brad arnett: https://github.com/daed/wolfgang
 
 - the current version of ambisleep leverages mpc/mpd under the hood, much like wolfgang.
 however the current implementation is geared around looping mp3 files rather than streaming.
 
 - tracks are currently added via `mpc add file:///filepath` which worked after enabling unix socket comm in the config file mpd.conf (uncomment bind_to_address path)
-- set mpd to loop with `mpc repeat on`
+- set mpd to loop a single track with `mpc repeat on` and `mpc single on`. 
 - more info here: https://linux.die.net/man/1/mpc
 
 
