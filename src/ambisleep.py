@@ -32,7 +32,7 @@ for file in photofiles:
     photos[file] = PhotoImage(file = f"../pics/{file}")
 
 
-# Track buttons
+# Track buttons. Current assumption is a 3 x 3 grid of nine track selections.
 ROWS = 3
 COLS = 3
 row = 1
