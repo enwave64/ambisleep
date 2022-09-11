@@ -21,10 +21,12 @@ def construct_playlist():
     tokens.remove('')
 
     #for each playlist line, get rid of the rest of the path and the '.mp3'
+    playlist = {}
     for index, token in enumerate(tokens):
         tmp = token.split('/')
         token = tmp[len(tmp) - 1]
         tmp = token.split('.')
         tokens[index] = tmp[0].lower().replace(" ", "")
+        playlist[index+1] = tokens[index]
 
-    return tokens
+    return playlist

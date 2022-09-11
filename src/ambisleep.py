@@ -18,6 +18,7 @@ root.columnconfigure(0, weight=1)
 root.rowconfigure(0, weight=1)
 
 playlist = mpc.construct_playlist()
+print(playlist)
 
 
 # PHOTO stuff
@@ -37,7 +38,9 @@ ROWS = 3
 COLS = 3
 row = 1
 col = 1
-for index, track in enumerate(playlist):
+
+for index, track in playlist.items():
+    print(f'Creating button for track {index} : {track}')
     photo = False
 
     # try to match the photo to the trackname. Current assumption is the track and img names are almost identical. 
@@ -49,10 +52,10 @@ for index, track in enumerate(playlist):
 
     #if we found a photo, create the button with the image
     if photo != False:
-        button = ttk.Button(mainframe, text=track, image=photo, command= lambda: start_player(index))
+        button = ttk.Button(mainframe, text=track, image=photo, command= lambda num=index: start_player(f"{num}"))
     #otherwise just use the text
     else:
-        button = ttk.Button(mainframe, text=track, command= lambda: start_player(index))
+        button = ttk.Button(mainframe, text=track, command= lambda num=index: start_player(f"{num}"))
     button.grid(column=col, row=row, sticky=W, ipadx=17, ipady=24)
     #do the grid rows & columns thing
     row = row + 1
