@@ -24,10 +24,10 @@ click/touch the stop button to stop
 
 ## todo
 
-- build a list of grid elements dynamically based on mpc playlist items
+- ~~build a list of grid elements dynamically based on mpc playlist items~~
 - get screen dimming working on the pi
 - icorporate motion sensor for tighter control of when and for how long the screen stays on
-- modularize code
+- modularize code # in progress
 - try a React UI version?
 
 ## current hardware (cat /proc/cpuinfo):
