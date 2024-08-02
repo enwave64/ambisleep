@@ -65,7 +65,7 @@ for index, track in playlist.items():
     else:
         button = ttk.Button(mainframe, text=track, command= lambda num=index: start_player(f"{num}"))
     # button.grid(column=col, row=row, sticky=W, ipadx=17, ipady=24)
-    button.grid(column=col, row=row, sticky=W, ipadx=44, ipady=220)
+    button.grid(column=col, row=row, sticky=W, ipadx=44, ipady=260)
     #do the grid rows & columns thing
     row = row + 1
     if row > ROWS:
@@ -74,7 +74,7 @@ for index, track in playlist.items():
 
 # STOP button
 stop_button = Button(mainframe, text="Stop", command=stop_player, bg="red")
-stop_button.grid(column=4, row=1, sticky=W, ipadx=130, ipady=270)
+stop_button.grid(column=4, row=1, sticky=W, ipadx=130, ipady=290)
 
 for child in mainframe.winfo_children(): 
     child.grid_configure(padx=5, pady=5)
